@@ -29,11 +29,12 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="https://github.com/MobileChromeApps/cordova-plugin-zip.git" source="npm" />
     <!-- <plugin name="cordova-plugin-googlemaps" spec="2.0.0">
         <variable name="API_KEY_FOR_ANDROID" value="AIzaSyDcCYAGNiSoGfpPlTjENM56g7tBJQzHETI" />
         <variable name="API_KEY_FOR_IOS" value="AIzaSyDcCYAGNiSoGfpPlTjENM56g7tBJQzHETI" />
     </plugin>
- -->
+    -->
     <!-- <gap:plugin name="com.adobe.plugins.gaplugin" /> -->
     <icon src="app_icon.png" />
     <icon src="app_icon.png" platform="android" width="57" height="57" density="mdpi" />
