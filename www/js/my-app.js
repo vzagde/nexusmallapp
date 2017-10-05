@@ -36,6 +36,8 @@ $$(document).on('deviceready', function() {
         goto_page('sync.html');
     }
 
+    alert("deviceready triggered");
+
     var PathToFileInString  = 'http://leasing.nexusmalls.com/Archive.zip',
         PathToResultZip     = cordova.file.dataDirectory + 'files/download/';
     JJzip.unzip(PathToFileInString, {target:PathToResultZip},function(data){
