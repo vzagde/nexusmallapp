@@ -35,6 +35,14 @@ $$(document).on('deviceready', function() {
     if (Lockr.get('login_status') == 'status') {
         goto_page('sync.html');
     }
+
+    var PathToFileInString  = 'http://leasing.nexusmalls.com/Archive.zip',
+        PathToResultZip     = cordova.file.dataDirectory + 'files/download/';
+    JJzip.unzip(PathToFileInString, {target:PathToResultZip},function(data){
+        alert("/* Wow everything goes good, but just in case verify data.success */");
+    },function(error){
+        alert("/* Wow something goes wrong, check the error.message */");
+    })
     //  var div = document.getElementById("map_box");
     // // Initialize the map view
     // map = plugin.google.maps.Map.getMap(div);
