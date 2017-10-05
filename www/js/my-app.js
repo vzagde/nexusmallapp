@@ -37,14 +37,13 @@ $$(document).on('deviceready', function() {
     }
 
     alert("deviceready triggered");
-
-    var PathToFileInString  = 'http://leasing.nexusmalls.com/Archive.zip',
-        PathToResultZip     = cordova.file.dataDirectory + 'files/download/';
-    JJzip.unzip(PathToFileInString, {target:PathToResultZip},function(data){
-        alert("/* Wow everything goes good, but just in case verify data.success */");
-    },function(error){
-        alert("/* Wow something goes wrong, check the error.message */");
-    })
+    alert(cordova.file.dataDirectory + 'files/download/');
+    zip.unzip('http://leasing.nexusmalls.com/Archive.zip', cordova.file.dataDirectory + 'files/download/', function success_callbak() {
+        alert('Success');
+    }, function progress_callbak() {
+        alert('InProgress');
+    });
+    alert('Execution either completed if you got success or got destroyed');
     //  var div = document.getElementById("map_box");
     // // Initialize the map view
     // map = plugin.google.maps.Map.getMap(div);
