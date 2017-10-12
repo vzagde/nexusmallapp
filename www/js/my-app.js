@@ -23,7 +23,6 @@ $$(document).on('pageInit', function(e) {
         $(this).find('.menu_i,.menu_p').addClass('menu_active');
     });
     if (page.name === 'about') {
-        myApp.alert('Here comes About page');
     }
 })
 
@@ -36,14 +35,10 @@ $$(document).on('deviceready', function() {
         goto_page('sync.html');
     }
 
-    alert("deviceready triggered");
-    alert(cordova.file.dataDirectory + 'files/download/');
     zip.unzip('http://leasing.nexusmalls.com/Archive.zip', cordova.file.dataDirectory + 'files/download/', function success_callbak() {
-        alert('Success');
+        console.log('Success');
     }, function progress_callbak() {
-        alert('InProgress');
     });
-    alert('Execution either completed if you got success or got destroyed');
     //  var div = document.getElementById("map_box");
     // // Initialize the map view
     // map = plugin.google.maps.Map.getMap(div);
